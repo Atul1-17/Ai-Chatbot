@@ -6,6 +6,11 @@ const userSchema = new Schema({
         required: true,
         trim: true
     },
+    phoneNo: {
+        type: Number,
+        required: true,
+        unique: true
+    },
     email: {
         type: String,
         required: true,
@@ -23,6 +28,9 @@ const userSchema = new Schema({
     },
     avatar: {
         type: String,
+    },
+    avatarPubilcId: {
+        type: String
     }
 }, 
 {timestamps: true})
